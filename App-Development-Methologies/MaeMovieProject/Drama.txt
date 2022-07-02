@@ -1,0 +1,3 @@
+Entry : 6 | Title : Portrait of a Lady on Fire | Runtime : 120 | Director : Celine Sciamma
+Entry : 7 | Title : Moonlight | Runtime : 111 | Director : barry Jenkins
+Entry : 8 | Title : Lady Bird | Runtime : 94 | Director : Greta Gerwig

@@ -1,0 +1,3 @@
+Entry : 9 | Title : The Green Knight | Runtime : 130 | Director : David Lowery
+Entry : 10 | Title : Chronicle | Runtime : 84 | Director : Josh Trank
+Entry : 11 | Title : The Shape Of Water | Runtime : 123 | Director : Guillermo del Toro

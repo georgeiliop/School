@@ -1,0 +1,4 @@
+
+Entry : 12 | Title : Everything Everywhere All at Once | Runtime : 140 | Director : Daniel Scheinert, Daniel Kwan
+Entry : 13 | Title : Mad Max: Fury Road | Runtime : 121 | Director : George Miller
+Entry : 14 | Title : Wonder Woman | Runtime : 141 | Director : Patty Jenkins

@@ -1,0 +1,6 @@
+
+Entry : 1 | Title : The Texas Chainsaw Massacre | Runtime : 83 | Director : Tobe hooper
+Entry : 2 | Title : X | Runtime : 105 | Director : Ti Wesst
+Entry : 3 | Title : Suspiria | Runtime : 152 | Director : Luca Guadagnino
+Entry : 4 | Title : Saint Maud | Runtime : 85 | Director : Rose Glass
+Entry : 5 | Title : Hereditary | Runtime : 128 | Director : Ari Aster
