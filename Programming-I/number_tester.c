@@ -7,7 +7,7 @@ int main ()
 	int N;
 	scanf("%d",&N);
 	printf("Now give the numbers, type 0 if you want to stop and continue with the programm : \n\n ");
-	int numbers[N-1],count=0,i,positive=0,CountPositive=0,negative=1,even=0,odd[N-1],oddcount=0; // Μεταβλήτες για το πρόγραμμα 
+	int numbers[N-1],count=0,i,positive=0,CountPositive=0,negative=1,even=0,odd[N-1],oddcount=0; // ΓΓ¥Γ΄Γ΅ΓΆΓ«ΓΓ΄Γ¥Γ² Γ£Γ©Γ΅ Γ΄Γ― Γ°Γ±ΓΌΓ£Γ±Γ΅Γ¬Γ¬Γ΅ 
 	scanf("%d",&numbers[count]);
 	
 	do {
