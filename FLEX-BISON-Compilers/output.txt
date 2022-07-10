@@ -1,0 +1,282 @@
+
+        INTCONST: 3
+        PLUS: +
+        INTCONST: 2
+        SEMI: ;
+ RESULT =5
+        INTCONST: 15
+        MINUS: -
+        INTCONST: 35
+        SEMI: ;
+ RESULT =-20
+        VARIABLE: testvar
+        PLUS: +
+        INTCONST: 1
+        SEMI: ;
+ RESULT =36
+        VARIABLE: var1
+        MINUS: -
+        VARIABLE: _var2
+        SEMI: ;
+ RESULT =0
+        INTCONST: 5
+        POWER: ^
+        INTCONST: 3
+        SEMI: ;
+ RESULT =125
+        INTCONST: 6
+        MUL: *
+        INTCONST: 7
+        SEMI: ;
+ RESULT =42
+        INTCONST: 6
+        DIV: /
+        INTCONST: 3
+        SEMI: ;
+ RESULT =2
+        TYPE: int
+        VARIABLE: a
+        SEMI: ;
+ Declaration Accepted
+        VARIABLE: a
+        PLUS: +
+        INTCONST: 2
+        SEMI: ;
+ RESULT =5
+        INTCONST: 5
+        LREQ: <=
+        INTCONST: 4
+ Comparison =0
+        INTCONST: 12
+        LT: <
+        INTCONST: 9
+ Comparison =0
+        INTCONST: 12
+        GT: >
+        INTCONST: 9
+ Comparison =1
+        INTCONST: 10
+        LREQ: <=
+        INTCONST: 10
+ Comparison =1
+        TYPE: int
+        VARIABLE: a
+        SEMI: ;
+ Declaration Accepted
+        TYPE: short
+        VARIABLE: b
+        EQUAL: =
+        INTCONST: 5
+        SEMI: ;
+ Assignment Accepted
+        TYPE: float
+        VARIABLE: k
+        SEMI: ;
+ Declaration Accepted
+        TYPE: long
+        VARIABLE: p
+        EQUAL: =
+        INTCONST: 60
+        SEMI: ;
+ Assignment Accepted
+        VARIABLE: c
+        EQUAL: =
+        INTCONST: 7
+        SEMI: ;
+ Assignment Accepted
+        INTCONST: 9
+        EQ: ==
+        INTCONST: 9
+ Comparison =1
+        VARIABLE: a
+        EQUAL: =
+        LBRACKET: [
+        VARIABLE: a
+        COMA: ,
+        VARIABLE: b
+        RBRACKET: ]
+        SEMI: ;
+ Array Accepted      
+	VARIABLE: a
+        EQUAL: =
+        LBRACKET: [
+        INTCONST: 1
+        COMA: ,
+        INTCONST: 2
+        COMA: ,
+        INTCONST: 3
+        RBRACKET: ]
+        SEMI: ;
+ Array Accepted
+
+        LBRACKET: [
+        INTCONST: 1
+        COMA: ,
+        INTCONST: 2
+        COMA: ,
+        INTCONST: 3
+        RBRACKET: ]
+        PLUS: +
+        LBRACKET: [
+        INTCONST: 3
+        COMA: ,
+        INTCONST: 4
+        COMA: ,
+        INTCONST: 5
+        RBRACKET: ]
+        SEMI: ;
+ Array Connection
+
+        VARIABLE: b
+        EQUAL: =
+        LBRACKET: [
+        STRING: "a"
+        COMA: ,
+        STRING: "b"
+        COMA: ,
+        STRING: "c"
+        RBRACKET: ]
+        SEMI: ;
+ Array Accepted
+
+        SCAN: scan
+        LBRACK: (
+        VARIABLE: x
+        RBRACK: )
+[BISON] scan function recognised
+        SEMI: ;
+        LEN: len
+        LBRACK: (
+        VARIABLE: ok
+        RBRACK: )
+[BISON] strcmp function recognised
+        SEMI: ;
+        CMP: cmp
+        LBRACK: (
+        STRING: "a"
+        COMA: ,
+        STRING: "b"
+        RBRACK: )
+[BISON] strcmp function recognised
+        SEMI: ;
+        PRINT: print
+        LBRACK: (
+        VARIABLE: x
+        RBRACK: )
+[BISON] print function recognised
+        SEMI: ;
+        PRINT: print
+        LBRACK: (
+        CMP: cmp
+        LBRACK: (
+        VARIABLE: str1
+        COMA: ,
+        VARIABLE: str2
+        RBRACK: )
+[BISON] strcmp function recognised
+        RBRACK: )
+[BISON] print function recognised
+        SEMI: ;
+        PRINT: print
+        LBRACK: (
+        LEN: len
+        LBRACK: (
+        STRING: "This is a string"
+        RBRACK: )
+[BISON] strcmp function recognised
+        RBRACK: )
+[BISON] print function recognised
+        SEMI: ;
+        IF: if
+        LBRACK: (
+        INTCONST: 2
+        GT: >
+        INTCONST: 1
+        RBRACK: )
+        THEN: then
+        LB: {
+        TYPE: int
+        VARIABLE: a
+        SEMI: ;
+ Declaration Accepted
+        VARIABLE: a
+        EQUAL: =
+        INTCONST: 5
+        SEMI: ;
+ Assignment Accepted
+        RB: }
+ If statement found
+        WHILE: while
+        LBRACK: (
+        VARIABLE: a
+        LT: <
+        VARIABLE: b
+        RBRACK: )
+        LB: {
+        TYPE: long
+        VARIABLE: k
+        EQUAL: =
+        INTCONST: 34
+        SEMI: ;
+ Assignment Accepted
+        RB: }
+ while statement found
+        FOR: for
+        LBRACK: (
+        VARIABLE: a
+        EQUAL: =
+        INTCONST: 4
+        SEMI: ;
+        VARIABLE: a
+        LT: <
+        INTCONST: 10
+        SEMI: ;
+        VARIABLE: a
+        OPERATOR: ++
+        SEMI: ;
+        RBRACK: )
+        LB: {
+        VARIABLE: a
+        EQUAL: =
+        INTCONST: 2
+        SEMI: ;
+ Assignment Accepted
+        RB: }
+ for statement found
+        TYPE: int
+        VARIABLE: b
+        VARIABLE: b     Line 37 at lexeme 'b' : syntax error
+
+        SEMI: ;         ERROR !
+
+        INTCONST: 5
+        DIV: /
+        ZERO: 0         Line 38 at lexeme '0' : syntax error
+        ERROR !
+
+        SEMI: ;         Line 39 at lexeme ';' : syntax error
+        ERROR !
+
+        INTCONST: 9
+        EQUAL: =        Line 40 at lexeme '=' : syntax error
+        ERROR !
+
+        INTCONST: 9
+        TYPE: long      Line 41 at lexeme 'long' : syntax error
+
+        SEMI: ;         ERROR !
+
+        TYPE: short
+        TYPE: float     Line 42 at lexeme 'float' : syntax error
+
+        SEMI: ;         ERROR !
+
+        VARIABLE: a
+        EQUAL: =
+        STRING: "afs"   Line 43 at lexeme '"afs"' : syntax error
+        ERROR !
+
+        SEMI: ;         Line 44 at lexeme ';' : syntax error
+        ERROR !
+INPUT FILE: PARSING SUCCEEDED.
+ (with 8 warning(s))

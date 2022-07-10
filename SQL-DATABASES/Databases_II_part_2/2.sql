@@ -1,0 +1,31 @@
+#FUNCTION ΓΙΑ ΝΑ ΕΜΦΑΝΙΖΕΙ ΠΟΣΕΣ ΜΕΡΕΣ ΙΣΧΥΕΙ Η ΚΡΑΤΙΣΗ
+DELIMITER $$
+CREATE FUNCTION FLIGHT_DAYS(ID INT) RETURNS INT
+READS SQL DATA
+DETERMINISTIC
+BEGIN
+DECLARE DIFF INT DEFAULT 0;
+SELECT DATEDIFF(FLIGHT_DATE,RES_DATE) INTO DIFF FROM RESERVATIONS
+INNER JOIN FLIGHTS ON FLIGHTID=FLIGHT_NO
+WHERE RESNO=ID;
+RETURN DIFF;
+END$$
+DELIMITER ;
+
+SELECT RESNO, CUSTID, CONCAT(FLIGHT_DAYS(1)," DAYS") AS DAYS FROM RESERVATIONS
+WHERE RESNO=1;
+
+#+-------+--------+----------+
+#| RESNO | CUSTID | DAYS     |
+#+-------+--------+----------+
+#|     1 |   1271 | 195 DAYS |
+#+-------+--------+----------+
+
+SELECT RESNO, CUSTID, CONCAT(FLIGHT_DAYS(5)," DAYS") AS DAYS FROM RESERVATIONS
+WHERE RESNO=5;
+
+#+-------+--------+----------+
+#| RESNO | CUSTID | DAYS     |
+#+-------+--------+----------+
+#|     5 |   1274 | 109 DAYS |
+#+-------+--------+----------+

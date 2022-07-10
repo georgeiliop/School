@@ -1,0 +1,57 @@
+# 18390198 ILIOPOULOS GEORGIOS
+DROP DATABASE IF EXISTS new_personnel;
+CREATE DATABASE new_personnel;
+USE new_personnel;
+
+CREATE TABLE DEPT(DEPTNO INT(2) NOT NULL, DNAME VARCHAR(14),LOC VARCHAR(14), PRIMARY KEY(DEPTNO));
+
+
+CREATE TABLE EMP(EMPNO INT(4) NOT NULL,DNAME VARCHAR(10),JOB VARCHAR(25), HIREDATE DATE , MGR INT(4), SAL FLOAT(7,2), COMM FLOAT(7,2),DEPTNO INT(2), 
+PRIMARY KEY(EMPNO), FOREIGN KEY(DEPTNO) REFERENCES DEPT(DEPTNO));
+
+INSERT INTO DEPT (DEPTNO,DNAME,LOC)
+	VALUES(10,"ACCOUNTING","ATHENS");
+INSERT INTO DEPT (DEPTNO,DNAME,LOC)
+	VALUES(20,"SALES","LONDON");
+INSERT INTO DEPT (DEPTNO,DNAME,LOC)
+	VALUES(30,"RESEARCH","ATHENS");
+INSERT INTO DEPT (DEPTNO,DNAME,LOC)
+	VALUES(40,"PAYROLL","LONDON");
+
+
+
+INSERT INTO EMP (EMPNO,DNAME,JOB,HIREDATE,MGR,SAL,DEPTNO)
+	VALUES(10,"CODD","ANALYST","1989-01-01",15,3000,10);
+INSERT INTO EMP (EMPNO,DNAME,JOB,HIREDATE,MGR,SAL,COMM,DEPTNO)
+	VALUES(15,"ELMASRI","ANALYST","1995-05-02",15,1200,150,10);
+INSERT INTO EMP (EMPNO,DNAME,JOB,HIREDATE,MGR,SAL,DEPTNO)
+	VALUES(20,"NAVATHE","SALESMAN","1977-07-07",20,2000,20);
+INSERT INTO EMP (EMPNO,DNAME,JOB,HIREDATE,MGR,SAL,COMM,DEPTNO)
+	VALUES(30,"DATE","PROGRAMMER","2004-05-04",15,1800,200,10);
+
+/* ΤΑ ΑΠΟΤΕΛΕΣΜΑΤΑ : 
+mysql> SELECT * FROM EMP;
++-------+---------+------------+------------+------+---------+--------+--------+
+| EMPNO | DNAME   | JOB        | HIREDATE   | MGR  | SAL     | COMM   | DEPTNO |
++-------+---------+------------+------------+------+---------+--------+--------+
+|    10 | CODD    | ANALYST    | 1989-01-01 |   15 | 3000.00 |   NULL |     10 |
+|    15 | ELMASRI | ANALYST    | 1995-05-02 |   15 | 1200.00 | 150.00 |     10 |
+|    20 | NAVATHE | SALESMAN   | 1977-07-07 |   20 | 2000.00 |   NULL |     20 |
+|    30 | DATE    | PROGRAMMER | 2004-05-04 |   15 | 1800.00 | 200.00 |     10 |
++-------+---------+------------+------------+------+---------+--------+--------+
+4 rows in set (0.08 sec)
+
+mysql> SELECT * FROM DEPT;
++--------+------------+--------+
+| DEPTNO | DNAME      | LOC    |
++--------+------------+--------+
+|     10 | ACCOUNTING | ATHENS |
+|     20 | SALES      | LONDON |
+|     30 | RESEARCH   | ATHENS |
+|     40 | PAYROLL    | LONDON |
++--------+------------+--------+
+4 rows in set (0.00 sec) */
+
+
+
+
